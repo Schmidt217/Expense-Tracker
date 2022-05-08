@@ -1,11 +1,16 @@
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { useContext } from "react";
+import { StyleSheet } from "react-native";
+import ExpensesOutput from "../components/expensesOutput/ExpensesOutput";
+import { ExpensesContext } from "../store/expenses-context";
 
 const AllExpenses = () => {
+	const expensesCtx = useContext(ExpensesContext);
 	return (
-		<View>
-			<Text>All Expenses Screen</Text>
-		</View>
+		<ExpensesOutput
+			expensesPeriod="Total"
+			expenses={expensesCtx.expenses}
+			fallbackText="You have no expenses entered!"
+		/>
 	);
 };
 
