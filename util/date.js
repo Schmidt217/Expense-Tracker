@@ -1,5 +1,3 @@
-import { setStatusBarNetworkActivityIndicatorVisible } from "expo-status-bar";
-
 function minTwoDigits(n) {
 	return (n < 10 ? "0" : "") + n;
 }
